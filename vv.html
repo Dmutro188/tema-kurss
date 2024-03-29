@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tic Tac Toe</title>
+		<style>
+			/* Styling for the game board */
+			.board {
+			  display: grid;
+			  grid-template-columns: repeat(3, 100px);
+			  grid-template-rows: repeat(3, 100px);
+			  gap: 4px;
+			}
+
+			.cell {
+			  display: flex;
+			  align-items: center;
+			  justify-content: center;
+			  font-size: 36px;
+			  font-weight: bold;
+			  border: 1px solid black;
+			  cursor: pointer;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>Tic Tac Toe</h1>
+		<div class="board" id="board">
+			<div class="cell" onclick="makeMove(0, 0)"></div>
+			<div class="cell" onclick="makeMove(0, 1)"></div>
+			<div class="cell" onclick="makeMove(0, 2)"></div>
+			<div class="cell" onclick="makeMove(1, 0)"></div>
+			<div class="cell" onclick="makeMove(1, 1)"></div>
+			<div class="cell" onclick="makeMove(1, 2)"></div>
+			<div class="cell" onclick="makeMove(2, 0)"></div>
+			<div class="cell" onclick="makeMove(2, 1)"></div>
+			<div class="cell" onclick="makeMove(2, 2)"></div>
+		</div>
+		<p id="message"></p>
+
+		<script>
+			const board = [
+				["", "", ""],
+				["", "", ""],
+				["", "", ""],
+			];
+
+			let currentPlayer = "X";
+			let gameOver = false;
+
+			function makeMove(row, col) {
+				if (!gameOver && board[row][col] === "") {
+					board[row][col] = currentPlayer;
+					document.getElementById("board").children[row * 3 + col].innerText =
+						currentPlayer;
+
+					if (checkWin()) {
+						document.getElementById(
+							"message"
+						).innerText = `${currentPlayer} wins!`;
+						gameOver = true;
+					} else if (checkTie()) {
+						document.getElementById("message").innerText = "Its a tie!";
+						gameOver = true;
+					} else {
+						currentPlayer = currentPlayer === "X" ? "O" : "X";
+					}
+				}
+			}
+
+			function checkWin() {
+				for (let i = 0; i < 3; i++) {
+					if (
+						board[i][0] === currentPlayer &&
+						board[i][1] === currentPlayer &&
+						board[i][2] === currentPlayer
+					) {
+						return true; // Horizontal win
+					}
+					if (
+						board[0][i] === currentPlayer &&
+						board[1][i] === currentPlayer &&
+						board[2][i] === currentPlayer
+					) {
+						return true; // Vertical win
+					}
+				}
+
+				if (
+					board[0][0] === currentPlayer &&
+					board[1][1] === currentPlayer &&
+					board[2][2] === currentPlayer
+				) {
+					return true; // Diagonal win (top-left to bottom-right)
+				}
+
+				if (
+					board[0][2] === currentPlayer &&
+					board[1][1] === currentPlayer &&
+					board[2][0] === currentPlayer
+				) {
+					return true; // Diagonal win (top-right to bottom-left)
+				}
+
+				return false;
+			}
+
+			function checkTie() {
+				for (let i = 0; i < 3; i++) {
+					for (let j = 0; j < 3; j++) {
+						if (board[i][j] === "") {
+							return false; // There are empty cells, the game continues
+						}
+					}
+				}
+				return true; // All cells are filled, it's a tie
+			}
+		</script>
+	</body>
+</html>

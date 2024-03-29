@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+a{
+ 
+width: 100px;
+    height: 21px;
+    margin-top: 300px;
+    margin-left: 7px;
+}
+  
+
+
+button{
+ text-decoration: none;
+  color: white;
+  font-size: 10px;
+  text-align: center;    
+}    
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+div{
+width: 50px;
+height: 50px;
+position: absolute;
+animation: mymove 1s infinite ease-in-out;
+
+
+}
+
+.w{
+ animation: mymove1 4s infinite ease-in-out;
+ width: 5px;
+    height: 5px;
+    position: relative;
+    top: 3;
+    left: 0;
+   
+}
+.f{
+    animation: mymove2 3s infinite ease-in-out;
+    width: 5px;
+    height: 5px;
+    position: relative;
+    top: 2;
+    left: 0;
+   
+}
+.h{
+    animation: mymove3 2s infinite ease-in-out;
+    width: 5px;
+    height: 5px;
+    position: relative;
+    top: 1;
+    left: 0;
+  
+
+}
+.m{
+    animation: mymove4 1s infinite ease-in-out;
+    width: 5px;
+    height: 5px;
+    position: relative;
+    top: 0;
+    left: 0;
+    
+}
+@keyframes mymove{
+    0%{ transform: rotate(-0deg); background-color: aqua;} 
+   10%{ transform: rotate(-100deg); background-color: blueviolet;}
+   20%{ transform: rotate(-200deg); background-color: brown;}
+   30%{ transform: rotate(-300deg); background-color: chartreuse;}
+   40%{ transform: rotate(-400deg); background-color: burlywood;}
+   50%{ transform: rotate(-500deg); background-color: crimson;}
+   60%{ transform: rotate(-600deg); background-color: darkgrey;}
+   70%{ transform: rotate(-700deg); background-color: orange;}
+   80%{ transform: rotate(-800deg); background-color: yellow;}
+   90%{ transform: rotate(-900deg); background-color: violet;}
+   100%{ transform: rotate(-1000deg); background-color: aliceblue;}
+}
+@keyframes mymove1{
+    0% { transform: translate(50px);} 
+    50%{ transform: translate(-50px, 0);} 
+    100%{ transform: translate(50px);}  
+}
+@keyframes mymove2{
+    0% { transform: translate(-50px);} 
+    50%{ transform: translate(50px, 0); } 
+    100%{ transform: translate(-50px);}  
+}
+@keyframes mymove3{
+    0% { transform: translate(50px);}
+     50%{ transform: translate(0, -50px); }
+      100%{ transform: translate(50px);} 
+}
+@keyframes mymove4{
+    0% { transform: translate(-50px);}
+     50%{ transform: translate(0, 50px);}
+      100%{ transform: translate(-50px);}  
+}
+    </style>
+</head>
+<body>
+    <div>
+        <span class="w"></span>
+        <span class="f"></span>
+        <span class="h"></span>
+        <span class="m"></span>
+        
+    </div>
+   <a href="file:///C:/Users/USER/OneDrive/Робочий%20стіл/=-=-=/123456.html"> <button >перезавантажити</button></a>
+</body>
+</html>

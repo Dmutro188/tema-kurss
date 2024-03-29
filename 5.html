@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+header {
+  background-color: white;
+  color: yellowgreen;
+  padding: 20px 0;
+  text-align: center;
+
+}
+a{
+    color:black;
+    text-decoration: none;
+}
+h1 {
+  margin: 0;
+}
+
+nav {
+  background-color: yellowgreen;
+  text-align: center;
+  padding: 10px 0;
+}
+ul {
+  list-style: none;
+}
+li {
+  display: inline;
+  padding: 10px 20px;
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+li  {
+  color: #fff;
+  text-decoration: none;
+
+}
+nav ul li:hover {
+  background-color: white;
+
+}
+nav ul  
+li:hover  {
+  
+  color: black;
+
+}
+.container {
+  width: 80%;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ 
+}
+p {
+  line-height: 1.6;
+}
+
+.hobbies {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.hobby {
+  width: calc(33.33% - 50px);
+  background-color: yellowgreen;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+ 
+}
+.hobby:hover{
+    animation: ww 3s ease-in-out;
+}
+@keyframes ww{
+    0%{transform: rotate(0deg)}
+    50%{transform: rotate(10deg)}
+    100%{transform: rotate(0deg);}
+}
+@media screen and (max-width: 768px) {
+  .hobby {
+    width: calc(50% - 20px);
+  }
+}
+.hobby img {
+  width: 100%;
+  border-radius: 5px;
+}
+footer {
+  background-color: yellowgreen;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  bottom: 0;
+  width: 100%;
+}
+.www{
+    color: white;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Моє хоббі</h1>
+    </header>
+
+    <nav>
+    
+      <ul>
+        <li><a href="#about">Про нас</a></li>
+        <li><a href="#interests">Мої захоплення</a></li>
+        <li><a href="#contact">Контакти</a></li>
+
+      </ul>
+    </nav>
+
+    <div id="about" class="container">
+      <h2 align="center">Про нас</h2>
+      <p>
+        Привіт! Мене звуть Діма. Я люблю проводити час з цікавими хоббі та
+        захопленнями. На цьому веб-сайті я хочу поділитися з вами кількома із
+        них.
+      </p>
+    </div>
+
+    <div id="interests" class="container">
+      <h2 align="center">Мої захоплення</h2>
+      <div class="hobbies">
+        <div class="hobby">
+          <h3 class="www">  В'язання</h3>
+          <img src="istockphoto-1128343736-612x612.jpg" />
+          <p class="www">
+            В'язання - це одне з моїх улюблених хоббі. Я люблю в'язати.
+          </p>
+        </div>
+        <div class="hobby">
+          <h3 class="www">Готування</h3>
+          <img src="уу.jpg" />
+          <p class="www">
+            Готування - це для мене спосіб розслабитися та втілити свої
+            кулінарні фантазії
+          </p>
+        </div>
+        <div class="hobby">
+          <h3 class="www">Малювання</h3>
+          <img src="images (4).jfif"  />
+          <p class="www">
+            Я люблю малювати та відкривати для себе нові стилі.
+            Це завжди додає мені натхнення.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="contact" class="container">
+      <h2>Контакти</h2>
+      <p>
+        <a href="https://www.instagram.com/"> Instagram</a> <br>
+        <a href="https://www.instagram.com/">Telegram</a>
+       
+      </p>
+    </div>
+    <footer>
+      <p>© 2024 Моє хоббі. Усі права захищені.</p>
+      
+    </footer>
+  </body>
+</html>
